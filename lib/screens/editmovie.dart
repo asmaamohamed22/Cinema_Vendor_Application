@@ -126,7 +126,7 @@ class _EditMovieState extends State<EditMovie> {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -150,7 +150,7 @@ class _EditMovieState extends State<EditMovie> {
                         ),
                       ),
                       SizedBox(
-                        height: size.height * 0.05,
+                        height: size.height * 0.04,
                       ),
                       TextFormField(
                         onSaved: (value) {
@@ -265,7 +265,7 @@ class _EditMovieState extends State<EditMovie> {
                         ),
                       ),
                       SizedBox(
-                        height: size.height * 0.05,
+                        height: size.height * 0.04,
                       ),
                       MyButton(
                         name: 'Edit Movie',

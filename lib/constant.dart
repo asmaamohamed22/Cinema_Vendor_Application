@@ -18,6 +18,7 @@ const kTextFieldDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(30.0)),
   ),
 );
+
 const kMovieImage = 'movieImage';
 const kMovieTitle = 'movieTitle';
 const kMovieDescription = 'movieDescription';

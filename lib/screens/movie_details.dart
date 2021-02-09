@@ -26,6 +26,7 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
@@ -39,7 +40,7 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
               color: Colors.black,
             )),
         title: Text(
-          'BookedSeats',
+          'Booked Seats',
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -58,10 +59,10 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                       Column(
                         children: [
                           CircleAvatar(
-                            maxRadius: 120,
+                            maxRadius: 100,
                             backgroundColor: kBackground,
                             child: CircleAvatar(
-                              maxRadius: 115,
+                              maxRadius: 95,
                               backgroundImage: NetworkImage(
                                   '${snapshot.data.data()['movieImage']}'),
                             ),
@@ -79,12 +80,12 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(4.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          width: 180,
+                          width: size.width * 0.45,
                           height: 40,
                           child: FlatButton(
                             onPressed: () {},
@@ -106,7 +107,7 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                           ),
                         ),
                         Container(
-                          width: 180,
+                          width: size.width * 0.44,
                           height: 40,
                           child: FlatButton(
                             onPressed: () {},
@@ -123,12 +124,12 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                                   size: 30,
                                 ),
                                 SizedBox(
-                                  width: 10,
+                                  width: 5,
                                 ),
                                 Text(
                                   '${snapshot.data.data()['movieTime']}',
                                   style: TextStyle(
-                                    fontSize: 19,
+                                    fontSize: 16,
                                   ),
                                 ),
                               ],
@@ -139,7 +140,7 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                     ),
                   ),
                   SizedBox(
-                    height: 30,
+                    height: 15,
                   ),
                   Expanded(
                     child: GridView.builder(
@@ -147,10 +148,10 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                       primary: false,
                       gridDelegate:
                           new SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 9,
+                        crossAxisCount: 8,
                         childAspectRatio: 1,
-                        crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
+                        crossAxisSpacing: 4,
+                        mainAxisSpacing: 4,
                       ),
                       itemCount: snapshot.data.data()['seats'].length,
                       shrinkWrap: true,
@@ -176,8 +177,14 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
                             }(),
                             border: Border.all(
                               color: Colors.black,
+                              width: 1.2,
                             ),
                           ),
+                          child: Center(
+                              child: Text(
+                            '${index + 1}',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          )),
                         );
                       },
                     ),
@@ -186,9 +193,11 @@ class _SingleMoviePageState extends State<SingleMoviePage> {
               ),
             );
           } else if (!snapshot.hasData) {
-            return CupertinoActivityIndicator(
-              animating: true,
-              radius: 15,
+            return Center(
+              child: CupertinoActivityIndicator(
+                animating: true,
+                radius: 15,
+              ),
             );
           } else {
             return null;
