@@ -65,94 +65,92 @@ class _AdminHomeState extends State<AdminHome> {
               ),
             ),
           ),
-          SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
-              child: Column(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, AddMovie.id);
-                    },
-                    child: Card(
-                      shadowColor: kBackground,
-                      elevation: 5.0,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 40, vertical: 30),
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 100,
-                          width: double.infinity,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '➕ ',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+            child: Column(
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, AddMovie.id);
+                  },
+                  child: Card(
+                    shadowColor: kBackground,
+                    elevation: 5.0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 30),
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '➕ ',
+                              style: TextStyle(
+                                fontSize: 30,
                               ),
-                              SizedBox(
-                                width: size.width * 0.02,
-                              ),
-                              Text(
-                                'Add Movie',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.02,
+                            ),
+                            Text(
+                              'Add Movie',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: size.height * 0.08,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, GetMovie.id);
-                    },
-                    child: Card(
-                      elevation: 5.0,
-                      shadowColor: kBackground,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 40, vertical: 30),
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 100,
-                          width: double.infinity,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '🎞️',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                ),
+                ),
+                SizedBox(
+                  height: size.height * 0.08,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, GetMovie.id);
+                  },
+                  child: Card(
+                    elevation: 5.0,
+                    shadowColor: kBackground,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 30),
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: double.infinity,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '🎞️',
+                              style: TextStyle(
+                                fontSize: 30,
                               ),
-                              SizedBox(
-                                width: size.width * 0.03,
-                              ),
-                              Text(
-                                'View Movies',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.03,
+                            ),
+                            Text(
+                              'View Movies',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
